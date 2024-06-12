@@ -2,7 +2,7 @@ import os
 from fastapi import FastAPI, HTTPException
 import uvicorn
 
-from data_parser.worksheet_manager import WorksheetManagerFactory
+from src.data_parser.worksheet_manager import WorksheetManagerFactory
 
 app = FastAPI()
 

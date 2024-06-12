@@ -19,6 +19,7 @@ from crewai_tools import BaseTool
 from crewai import Agent, Task
 from langchain_openai import ChatOpenAI
 
+
 backstory_tmpl = '''
     You are an analyser who answers questions based on the data of a spreadsheet
     You are given a dataset which is parsed from an excel sheet. The example of data is this
@@ -48,6 +49,10 @@ class GetValueFromSheet(BaseTool):
 
 
 class AgentMagic:
+    '''
+    this file has AgentMagic class, which initializes a Crewai agent
+    and starts a converstaion loop when a question is asked
+    '''
     def __init__(self, worksheet_data):
         self.role = '''
             You are a excel sheet analyst, who gives answer to questions by thinking carefully and step by step, and
@@ -84,7 +89,7 @@ class AgentMagic:
 
 if __name__ == "__main__":
     from data_parser.dfs_components import ExcelIslandFinder
-    w = ExcelIslandFinder("/home/shubhra/work/Smart-Spreadsheet/tests/example_0.xlsx")
+    w = ExcelIslandFinder("~/Smart-Spreadsheet/tests/example_0.xlsx")
     all_dfs = w.get_dataframe_list()
     data = []
     for df in all_dfs:

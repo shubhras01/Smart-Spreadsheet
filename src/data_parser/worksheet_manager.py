@@ -1,6 +1,6 @@
 import os
 from .dfs_components import ExcelIslandFinder
-from agents.run_agent import AgentMagic
+from src.agents.run_agent import AgentMagic
 
 
 class Worksheet:

@@ -1,4 +1,4 @@
-from data_parser.worksheet_manager import WorksheetManagerFactory
+from src.data_parser.worksheet_manager import WorksheetManagerFactory
 from pydantic.v1 import BaseModel, Field
 
 
