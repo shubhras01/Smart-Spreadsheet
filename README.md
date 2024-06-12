@@ -1,5 +1,30 @@
 # Smart Spreadsheet
 
+Usage:
+1. python3 -m venv ../smart-worksheet-env
+2. source ../smart-worksheet-env/bin/activate
+3. pip install -r ./requirements.txt
+4. python ./main.py
+
+This will start a service on http://localhost:8000/docs, open try running the apis 
+
+API workflow
+1. POST /register_worksheet/?file_path=/path/to/xlsx_sheet.xlsx
+```bash
+ curl -X 'POST' \
+  'http://localhost:8000/register_worksheet/?file_path=%2Fhome%2Fshubhra%2Fwork%2FSmart-Spreadsheet%2Ftests%2Fexample_0.xlsx' \
+  -H 'accept: application/json' \
+  -d '
+  ```
+2. GET /ask_smart/ returns answer to the question asked in query. Its to be called after the worksheet is registered
+```commandline
+curl -X 'GET' \
+  'http://localhost:8000/ask_smart/?query=What%20is%20the%20Total%20Cash%20and%20Cash%20Equivalent%20of%20Oct.%20AND%20Nov.%20of%202023%20combined' \
+  -H 'accept: application/json'
+```
+
+----------------------------------------------------------------------------------------
+
 ## Introduction
 
 As a **Founding Senior Engineer** at Capix you will lead the the development of the Company’s technical vision and strategy, oversee all the technological development, and help develop and implement the product. This is a very critical role. It is paramount that you are a master of engineering able to ship great software fast. We’re looking for the 10Xers and this project helps us evaluate if you can get the job done. 
@@ -56,4 +81,8 @@ In the repo, there are example Excel files that the client has shared with us. T
 ## Remarks
 
 We appreicate the time you will devote to this project. We hope you enjoy this exercise!
+
+
+-------------------------------------------------------------------------------------------------------
+
 
