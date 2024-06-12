@@ -42,7 +42,7 @@ def remove_none_key_value_pairs(d: dict[Any, Any]) -> dict[Any, Any]:
 def process_simple_table(ws: Worksheet) -> list[dict[str, Union[str, float, int]]]:
     """
     process_simple_table handles a simple spreadsheet which has one table starting from the top left corner
-    Its first row is its header and the following rows are data records.
+    Its first row is its header and the following rows are data_parser records.
     Example:
     | Month    | Savings |
     | -------- | ------- |
@@ -74,7 +74,7 @@ def process_hierarchical_table(ws: Worksheet) -> dict[str, Any]:
     process_hierarchical_table handles a spreadsheet which has one table starting from the top left corner
     Its top left cell is empty. Its first row and first column are its headers.
     Its first column has hierarchical structural represented by the number of leading spaces.
-    Some rows represents a category where the data cells are empty. Other rows represents actual data where data can be found in the data cells.
+    Some rows represents a category where the data_parser cells are empty. Other rows represents actual data_parser where data_parser can be found in the data_parser cells.
     Example:
     |                                              |30-Sep-23           |31-Oct-23           |30-Nov-23           |
     |----------------------------------------------|--------------------|--------------------|--------------------|
